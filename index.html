@@ -7,22 +7,27 @@
   <title>Document</title>
 </head>
 <body>
-  <h1>Student Grade Table</h1>
-  <table class="table table-striped">
-    <thead>
-      <tr>
-        <th>Student Name</th>
-        <th>Course</th>
-        <th>Grade</th>
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-
+  <div class="container">
+    <header class="row">
+      <h1 class="col">Student Grade Table</h1>
+      <h2 class="col d-flex justify-content-end align-items-end">Average Grade<span class="badge badge-secondary"></span></h2>
+    </header>
+    <table class="table table-striped">
+      <thead class="thead-dark">
+        <tr>
+          <th>Student Name</th>
+          <th>Course</th>
+          <th>Grade</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
   <script src="components/app.js"></script>
   <script src="components/grade-table.js"></script>
+  <script src="components/page-header.js"></script>
   <script src="main.js"></script>
 </body>
 </html>
