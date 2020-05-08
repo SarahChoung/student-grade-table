@@ -10,10 +10,10 @@ class GradeTable {
       tbody.append(this.renderGradeRow(grades[i], this.deleteGrade));
     }
 
-    if (grades.length) {
-      this.noGradesElement.className = "d-none";
+    if (grades.length === 0) {
+      pElement.classList.remove("d-none");
     } else {
-      this.noGradesElement.className = "";
+      pElement.className = "d-none";
     }
   }
   onDeleteClick(deleteGrade) {
@@ -30,7 +30,8 @@ class GradeTable {
     studentName.textContent = data.name;
     studentCourse.textContent = data.course;
     studentGrade.textContent = data.grade;
-    button.textContent = "Delete";
+    button.textContent = "DELETE";
+    button.className = "bun btn-danger";
 
     deleteButton.append(button);
     row.append(studentName, studentCourse, studentGrade, deleteButton);
